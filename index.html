@@ -5,25 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            myfont: 'Manrope',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+    </style>
   
   <title>Frontend Mentor | Advice generator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="flex justify-center items-center h-screen bg-[#202632] ">
 
-  Advice #<!-- Advice ID goes here -->
-
-  "<!-- Advice text goes here -->"
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container w-[500px] bg-[#313A49] shadow-xl flex flex-col items-center gap-8 p-8 pb-16 relative rounded-xl">
+    <div class="text-[#52FFA8] text-xs font-medium flex gap-4 ">ADVICE  <span id="adviceId"># 000</span></div>
+    <p id="mainAdvice" class="text-[#CDDBE7] text-center font-myfont"></p>
+    <div> <img src="./images/pattern-divider-desktop.svg" alt=""></div>
+    <button class="absolute -bottom-8 hover:drop-shadow-[0_0_20px_#52FFA8] h-16 w-16 rounded-full bg-[#52FFA8] flex justify-center items-center active:scale-95"><img src="./images/icon-dice.svg" alt=""></button>
   </div>
+
+
+  
+  
   <script src="./advice.js"></script>
 </body>
 </html>
