@@ -11,7 +11,7 @@ async function getText() {
     let AdviceApiText = await adviceApi.text();
    let getJsonFormat = JSON.parse(AdviceApiText)
  adviceId.textContent = getJsonFormat.slip.id
- mainAdvice.textContent = getJsonFormat.slip.advice
+ mainAdvice.textContent = "\""+getJsonFormat.slip.advice+"\""
   }
 
  
